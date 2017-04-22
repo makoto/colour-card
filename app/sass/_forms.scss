@@ -1,9 +1,26 @@
 input {
-  display: block
+  display: block;
+  padding: 2.1rem 2.4rem 2.2rem;
+  font-size: $base-font-size + .5rem;
+  box-shadow: inset 0 0 0 0.5rem $tcc-primary;
+  outline: none;
+  transition: color .25s, box-shadow .25s;
+  border: 0;
+  color: $ink;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 0 .8rem darken($tcc-primary, 7);
+  }
+
+  &::placeholder {
+    color: mix($tcc-primary, $paper, 50%);
+  }
 }
 
 .password-input {
-
+  width: calc(100% - 2.4rem * 2);
+  margin: .5rem 0 2rem;
 }
 
 .password-btn {
