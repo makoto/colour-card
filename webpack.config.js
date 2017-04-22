@@ -16,6 +16,7 @@ module.exports = {
       {from: './app/index.html', to: "index.html"},
       {from: './app/order.html', to: "order.html"},
       {from: './app/redeem.html', to: "redeem.html"},
+      {from: './app/info.html', to: "info.html"},
     ])
   ],
   module: {
