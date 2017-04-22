@@ -46,12 +46,20 @@ window.addEventListener('load', function(){
         var result =  order(this.password);
         this.pubkey = result.pubkey;
         this.salt = result.salt;
+        this.next_panel();
       },
       next_panel: function(){
         this.current_panel++;
       },
       redirect: function(page) {
         window.location.href=page;
+      },
+      display: function(panel_number){
+        if (this.current_panel == panel_number) {
+          return {display:''};
+        }else{
+          return {display:'none'};
+        }
       }
     }
   })
@@ -62,7 +70,7 @@ window.addEventListener('load', function(){
     methods: {
       isActive: function(panel_number){
         return {active:this.current_panel == panel_number}
-      }
+      },
     }
   })
 })

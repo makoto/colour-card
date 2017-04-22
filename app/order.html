@@ -17,7 +17,7 @@
   </header> <!-- /.header-container -->
 
   <div class="main" id="main">
-    <div class="panel panel-1" style="">
+    <div class="panel panel-1" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
         <label>Twitter:</label>
         <input type="name" name="name" class="input" placeholder="@twitter_handle">
@@ -25,7 +25,7 @@
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
-    <div class="panel panel-2" style="">
+    <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
         <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
@@ -33,18 +33,24 @@
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
 
-    <div class="panel panel-3" style="">
+    <div class="panel panel-3" v-bind:style="display(3)">
       <!-- <form> to avoid submitting page -->
         <label>Password confirmation:</label>
         <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
-    <div class="panel panel-4" style="">
+    <div class="panel panel-4" v-bind:style="display(4)">
 
       <!-- <form> to avoid submitting page -->
         <label>Thank you for the order</label>
-        {{pubkey}} and {{salt}} are sent.
+        <p>The fowlloing information is sent and you will soon receive our color card</p>
+        <ul>
+          <li>public key:{{pubkey}}</li>
+          <li>short code:{{salt}}</li>
+        </ul>
+        <!-- if I get rid of input, it does not hide for some reason. -->
+        <input type="hidden">
         <div class="cta-btn-container">
           <button v-on:click="redirect('index.html')" class="cta-btn">Home ➞</button>
         </div>
