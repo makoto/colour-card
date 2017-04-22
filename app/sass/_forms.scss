@@ -7,6 +7,8 @@ input {
   transition: color .25s, box-shadow .25s;
   border: 0;
   color: $ink;
+  width: calc(100% - 2.4rem * 2);
+  margin: .5rem 0 2rem;
 
   &:hover,
   &:focus {
@@ -19,8 +21,6 @@ input {
 }
 
 .password-input {
-  width: calc(100% - 2.4rem * 2);
-  margin: .5rem 0 2rem;
 }
 
 .password-btn {
