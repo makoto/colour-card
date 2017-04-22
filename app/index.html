@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,400,500,700" rel="stylesheet">
 
   <script src="./app.js"></script>
+  <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
 
@@ -15,7 +16,8 @@
     <button class="header-btn menu-btn"></button>
   </header> <!-- /.header-container -->
 
-  <div class="main">
+  <div class="main" id="main">
+    hello {{message}}
     <div class="panel panel-1">
       <img class="intro-logo" src="assets/tcc-logo-large.svg">
 
@@ -26,12 +28,12 @@
       </div>
     </div> <!-- /.panel-1 -->
 
-    <div class="panel panel-2" style="display: none;">
-      <form>
+    <div class="panel panel-2" style="">
+      <!-- <form> to avoid submitting page -->
         <label>Password:</label>
-        <input type="password" name="password" class="password-input">
-        <button class="password-btn">Go</button>
-      </form>
+        <input v-model="password" type="password" name="password" class="password-input">
+        <button v-on:click="order" class="password-btn">Go</button>
+      <!-- </form> -->
 
     </div> <!-- /.panel-2 -->
   </div> <!-- /.main -->
