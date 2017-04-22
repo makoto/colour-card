@@ -17,33 +17,23 @@
   </header> <!-- /.header-container -->
 
   <div class="main" id="main">
-    hello {{message}}
-    <span v-bind:class="{foo:false}">current page {{current_panel}}</span>
     <div class="panel panel-1">
       <img class="intro-logo" src="assets/tcc-logo-large.svg">
 
       <p class="intro-text">Welcome to <b> the Colour Card</b>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
       <div class="cta-btn-container">
-        <button v-on:click="next_panel" class="cta-btn">Get started now ➞</button>
+        <button v-on:click="order_page" class="cta-btn">Get started now ➞</button>
       </div>
     </div> <!-- /.panel-1 -->
-
-    <div class="panel panel-2" style="">
-      <!-- <form> to avoid submitting page -->
-        <label>Password:</label>
-        <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
-        <button v-on:click="order" class="password-btn">Go</button>
-      <!-- </form> -->
-    </div> <!-- /.panel-2 -->
   </div> <!-- /.main -->
 
   <footer id="footer" class="footer-container">
     <ul class="pagination-container">
-      <li class="pagination-item" v-bind:class="isActive(1)"></li>
-      <li class="pagination-item" v-bind:class="isActive(2)"></li>
-      <li class="pagination-item" v-bind:class="isActive(3)"></li>
-      <li class="pagination-item" v-bind:class="isActive(4)"></li>
+      <li class="pagination-item active"></li>
+      <li class="pagination-item"></li>
+      <li class="pagination-item"></li>
+      <li class="pagination-item"></li>
     </ul>
   </footer> <!-- /.footer-container -->
 
