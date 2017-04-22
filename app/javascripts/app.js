@@ -30,15 +30,31 @@ var order = function(password){
 }
 
 window.addEventListener('load', function(){
-  var app = new Vue({
+  var data = {
+    message: 'Hello world!',
+    password: null,
+    current_panel: 1
+  }
+  var main = new Vue({
     el: '#main',
-    data: {
-      message: 'Hello world!',
-      password: null
-    },
+    data: data,
     methods: {
       order: function() {
+        this.current_panel++;
         return order(this.password);
+      },
+      next_panel: function(){
+        this.current_panel++;
+      }
+    }
+  })
+
+  var footer = new Vue({
+    el: '#footer',
+    data: data,
+    methods: {
+      isActive: function(panel_number){
+        return {active:this.current_panel == panel_number}
       }
     }
   })
