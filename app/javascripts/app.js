@@ -12,6 +12,7 @@ console.log('menu', menu);
 let bip39 = require('bip39');
 let crypto = require('crypto');
 let secp256k1 = require('secp256k1');
+let util = require("ethereumjs-util");
 let salt, seed, publicKey, data;
 let host = 'http://bb6ce398.ngrok.io/order';
 let jquery = require('jquery');
@@ -29,12 +30,33 @@ var order = function(password){
   return data;
 }
 
+var redeem = function(mnemonic, password){
+  let entropy = bip39.mnemonicToEntropy(mnemonic);
+  let salt = entropy.slice(0, 16);
+  let mfr_data = bip39.mnemonicToSeed(mnemonic).slice(0, 32);
+  let user_data = bip39.mnemonicToSeed(password, salt).slice(0, 32);
+  let privkey = secp256k1.privateKeyTweakMul(user_data, mfr_data);
+  let pubkey = secp256k1.publicKeyCreate(privkey, false).slice(1);
+  console.log(pubkey.length);
+  console.log(pubkey.toString('hex'))
+  console.log(privkey.toString('hex'))
+  var addr = util.pubToAddress(pubkey);
+  console.log(addr.toString("hex"));
+  return {
+    pubkey: pubkey.toString('hex'),
+    privkey: privkey.toString('hex')
+  }
+}
+
+
 window.addEventListener('load', function(){
   var data = {
     message: 'Hello world!',
     password: null,
     password_confirmation: null,
+    mnemonic: null,
     pubkey: null,
+    privkey: null,
     salt: null,
     current_panel: 1
   }
@@ -46,6 +68,13 @@ window.addEventListener('load', function(){
         var result =  order(this.password);
         this.pubkey = result.pubkey;
         this.salt = result.salt;
+        this.next_panel();
+      },
+      redeem: function() {
+        console.log(this.mnemonic, this.password);
+        var result =  redeem(this.mnemonic, this.password);
+        this.pubkey = result.pubkey;
+        this.privkey = result.privkey;
         this.next_panel();
       },
       next_panel: function(){
