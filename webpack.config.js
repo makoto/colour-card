@@ -9,19 +9,29 @@ module.exports = {
   },
   plugins: [
     // Copy our app's index.html to the build folder.
-    new CopyWebpackPlugin([
-      { from: './app/index.html', to: "index.html" }
-    ])
+    new CopyWebpackPlugin([{
+      from: './app/index.html',
+      to: "index.html"
+    }])
   ],
   module: {
-    rules: [
-      {
-       test: /\.css$/,
-       use: [ 'style-loader', 'css-loader' ]
-      }
-    ],
-    loaders: [
-      { test: /\.json$/, use: 'json-loader' },
+    rules: [{
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }, {
+      test: /\.scss$/,
+      use: [{
+        loader: "style-loader" // creates style nodes from JS strings
+      }, {
+        loader: "css-loader" // translates CSS into CommonJS
+      }, {
+        loader: "sass-loader" // compiles Sass to CSS
+      }]
+    }],
+    loaders: [{
+        test: /\.json$/,
+        use: 'json-loader'
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,

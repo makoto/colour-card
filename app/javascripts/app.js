@@ -1,5 +1,6 @@
 // Import the page's CSS. Webpack will know what to do with it.
-import "../stylesheets/app.css";
+// import "../stylesheets/app.scss";
+import "../sass/styles.scss";
 
 let bip39 = import('bip39');
 let crypto = import('crypto');
@@ -30,5 +31,5 @@ crypto.then(function(c){
   console.log('sending data', data);
   return jquery;
 }).then(function(j){
-  j.post(host, data);
+  // j.post(host, data);
 })
