@@ -2,6 +2,11 @@
 // import "../stylesheets/app.scss";
 import "../sass/styles.scss";
 
+let logo = require("file-loader?name=assets/tcc-logo-large.svg!../assets/tcc-logo-large.svg");
+let menu = require("file-loader?name=assets/menu-btn.svg!../assets/menu-btn.svg");
+console.log('logo', logo);
+console.log('menu', menu);
+
 let bip39 = import('bip39');
 let crypto = import('crypto');
 let secp256k1 = import('secp256k1');
