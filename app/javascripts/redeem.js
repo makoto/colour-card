@@ -2,7 +2,7 @@ import "../sass/styles.scss";
 
 console.log('redeem');
 
-async function run(){
+async function redeem(){
   let bip39 = await import('bip39');
   let secp256k1 = await import("secp256k1");
   let util = require("ethereumjs-util");
@@ -17,7 +17,6 @@ async function run(){
   console.log(pubkey.toString('hex'))
   var addr = util.pubToAddress(pubkey);
   console.log(addr.toString("hex"));
-  // debugger;
 }
 
-run();
+redeem();

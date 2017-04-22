@@ -25,7 +25,8 @@
   background-color: $tcc-primary;
   transition: background-color .25s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: darken($tcc-primary, 10);
     box-shadow: none;
   }
