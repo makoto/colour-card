@@ -23,19 +23,14 @@
       <p class="intro-text">Welcome to <b> the Colour Card</b>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
       <div class="cta-btn-container">
-        <button v-on:click="order_page" class="cta-btn">Get started now ➞</button>
+        <button v-on:click="redirect('order.html')" class="cta-btn">Get started now ➞</button>
+      </div>
+
+      <div class="cta-btn-container">
+        <button v-on:click="redirect('redeem.html')" class="cta-btn">Redeem your key ➞</button>
       </div>
     </div> <!-- /.panel-1 -->
   </div> <!-- /.main -->
-
-  <footer id="footer" class="footer-container">
-    <ul class="pagination-container">
-      <li class="pagination-item active"></li>
-      <li class="pagination-item"></li>
-      <li class="pagination-item"></li>
-      <li class="pagination-item"></li>
-    </ul>
-  </footer> <!-- /.footer-container -->
 
 </body>
 </html>

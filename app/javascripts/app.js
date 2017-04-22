@@ -26,13 +26,16 @@ var order = function(password){
   data = {pubkey:publicKey, salt:salt};
   console.log('sending data', data);
   // jquery.post(host, data);
-  return false;
+  return data;
 }
 
 window.addEventListener('load', function(){
   var data = {
     message: 'Hello world!',
     password: null,
+    password_confirmation: null,
+    pubkey: null,
+    salt: null,
     current_panel: 1
   }
   var main = new Vue({
@@ -40,13 +43,15 @@ window.addEventListener('load', function(){
     data: data,
     methods: {
       order: function() {
-        return order(this.password);
+        var result =  order(this.password);
+        this.pubkey = result.pubkey;
+        this.salt = result.salt;
       },
       next_panel: function(){
         this.current_panel++;
       },
-      order_page: function() {
-        window.location.href='order.html';
+      redirect: function(page) {
+        window.location.href=page;
       }
     }
   })

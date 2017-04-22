@@ -17,29 +17,47 @@
   </header> <!-- /.header-container -->
 
   <div class="main" id="main">
-    <div class="panel panel-2" style="">
+    <div class="panel panel-1" style="">
       <!-- <form> to avoid submitting page -->
         <label>Twitter:</label>
         <input type="name" name="name" class="input" placeholder="@twitter_handle">
-        <button v-on:click="order" class="password-btn">Go</button>
+        <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
-    <div class="panel panel-2" style="display:none">
+    <div class="panel panel-2" style="">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
         <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <button v-on:click="next_panel" class="password-btn">Next</button>
+      <!-- </form> -->
+    </div> <!-- /.panel-3 -->
+
+    <div class="panel panel-3" style="">
+      <!-- <form> to avoid submitting page -->
+        <label>Password confirmation:</label>
+        <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>
       <!-- </form> -->
-    </div> <!-- /.panel-2 -->
+    </div> <!-- /.panel-3 -->
+    <div class="panel panel-4" style="">
+
+      <!-- <form> to avoid submitting page -->
+        <label>Thank you for the order</label>
+        {{pubkey}} and {{salt}} are sent.
+        <div class="cta-btn-container">
+          <button v-on:click="redirect('index.html')" class="cta-btn">Home ➞</button>
+        </div>
+      <!-- </form> -->
+    </div> <!-- /.panel-3 -->
   </div> <!-- /.main -->
 
   <footer id="footer" class="footer-container">
     <ul class="pagination-container">
-      <li class="pagination-item" v-bind:class="isActive(0)"></li>
       <li class="pagination-item" v-bind:class="isActive(1)"></li>
       <li class="pagination-item" v-bind:class="isActive(2)"></li>
       <li class="pagination-item" v-bind:class="isActive(3)"></li>
+      <li class="pagination-item" v-bind:class="isActive(4)"></li>
     </ul>
   </footer> <!-- /.footer-container -->
 
