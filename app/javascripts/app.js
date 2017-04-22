@@ -51,7 +51,7 @@ var redeem = function(mnemonic, password){
 
 window.addEventListener('load', function(){
   var data = {
-    message: 'Hello world!',
+    twitter: null,
     password: null,
     password_confirmation: null,
     mnemonic: null,

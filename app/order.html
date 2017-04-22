@@ -20,7 +20,7 @@
     <div class="panel panel-1" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
         <label>Twitter:</label>
-        <input type="name" name="name" class="input" placeholder="@twitter_handle">
+        <input v-model="twitter" type="name" name="name" class="input" placeholder="@twitter_handle">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
@@ -28,7 +28,7 @@
     <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
-        <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
@@ -36,7 +36,7 @@
     <div class="panel panel-3" v-bind:style="display(3)">
       <!-- <form> to avoid submitting page -->
         <label>Password confirmation:</label>
-        <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <input v-model="password_confirmation" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
