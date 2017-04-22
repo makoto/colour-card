@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>THE COLOUR CARD</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,400,500,700" rel="stylesheet">
+
   <script src="./app.js"></script>
 </head>
 <body>
@@ -10,11 +13,28 @@
   <header class="header-container">
     <h1 class="header-branding">THE COLOUR CARD</h1>
     <button class="header-btn menu-btn"></button>
-  </header>
+  </header> <!-- /.header-container -->
 
   <div class="main">
-    <div class="panel"></div>
-  </div>
+    <div class="panel panel-1">
+      <img class="intro-logo" src="assets/tcc-logo-large.svg">
+
+      <p class="intro-text">Welcome to <b> the Colour Card</b>, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+      <div class="cta-btn-container">
+        <button class="cta-btn">Get started now ➞</button>
+      </div>
+    </div> <!-- /.panel-1 -->
+
+    <div class="panel panel-2" style="display: none;">
+      <form>
+        <label>Password:</label>
+        <input type="password" name="password" class="password-input">
+        <button class="password-btn">Go</button>
+      </form>
+
+    </div> <!-- /.panel-2 -->
+  </div> <!-- /.main -->
 
   <footer class="footer-container">
     <ul class="pagination-container">
@@ -23,6 +43,7 @@
       <li class="pagination-item"></li>
       <li class="pagination-item"></li>
     </ul>
-  </footer>
+  </footer> <!-- /.footer-container -->
+
 </body>
 </html>
