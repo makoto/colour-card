@@ -98,7 +98,7 @@ window.addEventListener('load', function(){
     data: data,
     methods: {
       isActive: function(panel_number){
-        return {active:this.current_panel == panel_number}
+        return {active:this.current_panel >= panel_number}
       },
     }
   })
