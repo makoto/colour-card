@@ -38,8 +38,10 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
+    "babel-preset-latest": "^6.24.1",
     "bip39": "^2.3.0",
     "crypto": "0.0.3",
+    "ethereumjs-util": "^5.1.1",
     "jquery": "^3.2.1",
     "random-js": "^1.0.8",
     "secp256k1": "^3.2.5",

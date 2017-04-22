@@ -1,1 +1,47 @@
-Order
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>THE COLOUR CARD</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,400,500,700" rel="stylesheet">
+
+  <script src="./app.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <h1 class="header-branding">THE COLOUR CARD</h1>
+    <button class="header-btn menu-btn"></button>
+  </header> <!-- /.header-container -->
+
+  <div class="main" id="main">
+    <div class="panel panel-2" style="">
+      <!-- <form> to avoid submitting page -->
+        <label>Twitter:</label>
+        <input type="name" name="name" class="input" placeholder="@twitter_handle">
+        <button v-on:click="order" class="password-btn">Go</button>
+      <!-- </form> -->
+    </div> <!-- /.panel-2 -->
+
+    <div class="panel panel-2" style="display:none">
+      <!-- <form> to avoid submitting page -->
+        <label>Password:</label>
+        <input type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <button v-on:click="order" class="password-btn">Go</button>
+      <!-- </form> -->
+    </div> <!-- /.panel-2 -->
+  </div> <!-- /.main -->
+
+  <footer id="footer" class="footer-container">
+    <ul class="pagination-container">
+      <li class="pagination-item" v-bind:class="isActive(0)"></li>
+      <li class="pagination-item" v-bind:class="isActive(1)"></li>
+      <li class="pagination-item" v-bind:class="isActive(2)"></li>
+      <li class="pagination-item" v-bind:class="isActive(3)"></li>
+    </ul>
+  </footer> <!-- /.footer-container -->
+
+</body>
+</html>

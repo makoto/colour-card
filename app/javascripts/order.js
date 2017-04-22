@@ -40,13 +40,11 @@ window.addEventListener('load', function(){
     data: data,
     methods: {
       order: function() {
+        this.current_panel++;
         return order(this.password);
       },
       next_panel: function(){
         this.current_panel++;
-      },
-      order_page: function() {
-        window.location.href='order.html';
       }
     }
   })
