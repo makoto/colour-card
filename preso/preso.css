@@ -436,3 +436,9 @@ h6 {
 .whynot {
     transform: scale(1.1);
 }
+
+#try h1 {
+    padding-top: 250px;
+    font-size: 96px;
+    text-align: center;
+}
