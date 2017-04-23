@@ -336,7 +336,15 @@ em::after {
     padding: 0;
 }
 
-#solution img, #demo iframe, #explainer svg, #explainer-redeem svg {
+#demo, #demo2 {
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height: 700px;
+    background: white;
+}
+
+#solution img, #demo iframe, #demo2 iframe, #explainer svg, #explainer-redeem svg {
     width: 100%;
     height: 100%;
 }
@@ -366,10 +374,4 @@ li {
 #title h3 {
     margin-top: 0;
     font-size: 24px;
-}
-
-#demo {
-    width: 600px;
-    height: 700px;
-    background: white;
 }
