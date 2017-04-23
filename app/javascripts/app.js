@@ -23,7 +23,7 @@ let jquery = require('jquery');
 
 var order = function(name, password){
   console.log('password', password);
-  salt = crypto.randomBytes(16).toString('hex');
+  salt = crypto.randomBytes(8).toString('hex');
   seed = bip39.mnemonicToSeed(password, salt)
   // console.log('seed', seed.toString('hex'));
   publicKey = secp256k1.publicKeyCreate(seed.slice(0,32)).toString('hex');
@@ -36,7 +36,7 @@ var order = function(name, password){
 
 var redeem = function(mnemonic, password){
   let entropy = bip39.mnemonicToEntropy(mnemonic);
-  let salt = entropy.slice(0, 16);
+  let salt = entropy.slice(0, 16).toString('hex');
   let mfr_data = bip39.mnemonicToSeed(mnemonic).slice(0, 32);
   let user_data = bip39.mnemonicToSeed(password, salt).slice(0, 32);
   let privkey = secp256k1.privateKeyTweakMul(user_data, mfr_data);
