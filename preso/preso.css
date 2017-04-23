@@ -420,11 +420,11 @@ h6 {
 }
 
  .art-img {
-    max-width: 50%;
-    margin-top: .8em;
+    max-width: 40%;
+    margin-top: 1.6em;
     margin-left: 6px;
-    outline: 6px #02d3af solid;
-    border: 6px solid white;
+    outline: 4px #02d3af solid;
+    border: 12px solid white;
  }
 
 #solution {
