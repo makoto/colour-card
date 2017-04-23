@@ -17,7 +17,7 @@ import yaml
 from .printer import CardPrinter
 
 
-ACTUALLY_PRINT = False
+ACTUALLY_PRINT = True
 
 
 mnemonic = Mnemonic('english')
@@ -71,6 +71,7 @@ def index(request):
 @require_POST
 @csrf_exempt
 def order(request):
+    print request.POST
     pubkey = request.POST['pubkey']
     salt = request.POST['salt']
     mnem = create_mnemonic(salt)
