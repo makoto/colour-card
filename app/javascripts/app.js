@@ -43,7 +43,7 @@ var redeem = function(mnemonic, password){
   var addr = util.pubToAddress(pubkey);
   console.log(addr.toString("hex"));
   return {
-    pubkey: pubkey.toString('hex'),
+    address: addr,
     privkey: privkey.toString('hex')
   }
 }
@@ -55,7 +55,7 @@ window.addEventListener('load', function(){
     password: null,
     password_confirmation: null,
     mnemonic: null,
-    pubkey: null,
+    address: null,
     privkey: null,
     salt: null,
     current_panel: 1,
@@ -77,7 +77,7 @@ window.addEventListener('load', function(){
       redeem: function() {
         console.log(this.mnemonic, this.password);
         var result =  redeem(this.mnemonic, this.password);
-        this.pubkey = result.pubkey;
+        this.address = result.address;
         this.privkey = result.privkey;
         this.next_panel();
       },
