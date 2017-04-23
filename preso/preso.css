@@ -358,3 +358,12 @@ ul, ol {
 li {
     margin-bottom: 0.25em;
 }
+
+#title h2 {
+    margin-bottom: 0;
+}
+
+#title h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
