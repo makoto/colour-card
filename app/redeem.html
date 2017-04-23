@@ -21,12 +21,14 @@
   <div class="main" id="main">
     <div class="panel panel-1" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
+        <img class="image-large" src="assets/card-mini-mnemonic.svg">
         <label>Mnemonic:</label>
         <textarea v-model="mnemonic" name="name" rows="8" cols="80" style="" placeholder="eg: cheap time globe subway hurry gas reopen dog draft burger barely joy"></textarea>
+        <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
-    <div class="panel panel-2" v-bind:style="display(1)">
+    <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
         <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
@@ -34,7 +36,7 @@
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
 
-    <div class="panel panel-2" v-bind:style="display(2)">
+    <div class="panel panel-2" v-bind:style="display(3)">
         <!-- <form> to avoid submitting page -->
         <p>Your key is successfully redeemed</p>
 
@@ -57,6 +59,7 @@
     <ul class="pagination-container">
       <li class="pagination-item" v-bind:class="isActive(1)"></li>
       <li class="pagination-item" v-bind:class="isActive(2)"></li>
+      <li class="pagination-item" v-bind:class="isActive(3)"></li>
     </ul>
   </footer> <!-- /.footer-container -->
 

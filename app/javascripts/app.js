@@ -4,6 +4,10 @@ import "../sass/styles.scss";
 
 let logo = require("file-loader?name=assets/tcc-logo-large.svg!../assets/tcc-logo-large.svg");
 let menu = require("file-loader?name=assets/menu-btn.svg!../assets/menu-btn.svg");
+
+let miniCard1 = require("file-loader?name=assets/card-mini-success.svg!../assets/card-mini-success.svg");
+let miniCard2 = require("file-loader?name=assets/card-mini-mnemonic.svg!../assets/card-mini-mnemonic.svg");
+
 console.log('logo', logo);
 console.log('menu', menu);
 
