@@ -82,7 +82,7 @@ def order(request):
         'name': request.POST['name'],
     })
     print_card('EVOLIS_Primacy', card)
-    return redirect('/done')
+    return HttpResponse('')
 
 
 def print_card(printerName, card):
