@@ -9,6 +9,7 @@ button {
   outline: none;
   border: 0;
   transition: color .25s, box-shadow .25s;
+  -webkit-appearance: none;
 
   &:hover,
   &:focus {
@@ -30,6 +31,7 @@ button {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 42.5% 50%;
+  -webkit-appearance: none;
 
   &:hover,
   &:focus {

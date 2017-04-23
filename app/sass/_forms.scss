@@ -9,6 +9,7 @@ input, textarea {
   color: $ink;
   width: calc(100% - 2.4rem * 2);
   margin: .5rem 0 2rem;
+  -webkit-appearance: none;
 
   &:hover,
   &:focus {
