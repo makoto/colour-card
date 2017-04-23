@@ -39,7 +39,10 @@
     <div class="panel panel-3" v-bind:style="display(3)">
       <!-- <form> to avoid submitting page -->
         <label>Password confirmation:</label>
-        <input v-model="password_confirmation" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
+        <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
+        <input v-if="toggle_mode" v-model="password_confirmation" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <input v-if="!toggle_mode" v-model="password_confirmation" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
