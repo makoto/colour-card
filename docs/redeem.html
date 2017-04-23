@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
   <title>THE COLOUR CARD</title>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Mono:500|Roboto:300,700" rel="stylesheet">
@@ -17,40 +19,48 @@
   </header> <!-- /.header-container -->
 
   <div class="main" id="main">
-    <div class="panel panel-1" v-bind:style="display(0)">
+    <div class="panel panel-1" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
+        <img class="image-large" src="assets/card-mini-mnemonic.svg">
+        <h4>Scratch off the scratch panel and enter the 12 word mnemonic from the back of your Colour Card...</h4>
         <label>Mnemonic:</label>
-        <textarea v-model="mnemonic" name="name" rows="8" cols="80" style="" placeholder="eg: cheap time globe subway hurry gas reopen dog draft burger barely joy"></textarea>
+        <textarea v-model="mnemonic" name="name" rows="3" cols="80" style="" placeholder="eg: cheap time globe subway hurry gas reopen dog draft burger barely joy"></textarea>
+        <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
-    <div class="panel panel-2" v-bind:style="display(0)">
+    <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
+        <h4>Please enter the password you used to create your Colour Card...</h4>
+
         <label>Password:</label>
         <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
         <button v-on:click="redeem" class="password-btn">Redeem</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
 
-    <div class="panel panel-2" v-bind:style="display(1)">
+    <div class="panel panel-2" v-bind:style="display(3)">
         <!-- <form> to avoid submitting page -->
-        <p>Your key is successfully redeemed</p>
+        <h4>Fantastic, Your key has been successfully redeemed!</h4>
 
-        <label>address:</label>
-        <span class="key-display">{{address}}</span>
+        <p>Here's your private information...</p>
 
-        <label>private key:</label>
-        <span id='private-key' class="key-display">hello{{privkey}}</span>
-        <div class="cta-btn-container">
-          <button v-on:click="copy_to_clipboard('#private-key')" class="cta-btn">Copy to clip board ➞</button>
-        </div>
+        <label>Address:</label>
+        <span class="key-display">0x{{address}}</span>
+
+        <label>Private key:</label>
+        <span id='private-key' class="key-display">{{privkey}}</span>
+        <!-- Trigger -->
+        <button id="copy" data-clipboard-action="copy" data-clipboard-target="#private-key">
+            Copy to clipboard
+        </button>
 
         <a href="https://www.myetherwallet.com/#view-wallet-info" target="blank" >Go to myetherwallet</a>
 
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
         <div class="cta-btn-container">
-          <button v-on:click="redirect('index.html')" class="cta-btn">Home ➞</button>
+          <button v-on:click="redirect('index.html')" class="cta-btn">Start again ➞</button>
         </div>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
@@ -60,6 +70,7 @@
     <ul class="pagination-container">
       <li class="pagination-item" v-bind:class="isActive(1)"></li>
       <li class="pagination-item" v-bind:class="isActive(2)"></li>
+      <li class="pagination-item" v-bind:class="isActive(3)"></li>
     </ul>
   </footer> <!-- /.footer-container -->
 
