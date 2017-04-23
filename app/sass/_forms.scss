@@ -21,6 +21,8 @@ input, textarea {
 }
 
 .password-input {
+  padding-right: 7rem;
+  width: calc(100% - 2.4rem * 2 - 7rem);
 }
 
 .password-btn {

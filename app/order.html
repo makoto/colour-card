@@ -34,8 +34,8 @@
         <h4>Next enter a memorable password, make sure it's something you'll never forget...</h4>
 
         <label>Password:</label>
-        <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
-        <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
+        <button v-if="toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
+        <button v-if="!toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
         <input v-if="toggle_mode" v-model="password" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <input v-if="!toggle_mode" v-model="password" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="next_panel" class="password-btn">Next</button>
@@ -47,8 +47,8 @@
         <h4>PLease confirm by re-typing your password...</h4>
 
         <label>Password confirmation:</label>
-        <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
-        <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
+        <button v-if="toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
+        <button v-if="!toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
         <input v-if="toggle_mode" v-model="password_confirmation" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <input v-if="!toggle_mode" v-model="password_confirmation" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>

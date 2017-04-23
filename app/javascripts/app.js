@@ -8,6 +8,8 @@ let menu = require("file-loader?name=assets/menu-btn.svg!../assets/menu-btn.svg"
 let miniCard1 = require("file-loader?name=assets/card-mini-success.svg!../assets/card-mini-success.svg");
 let miniCard2 = require("file-loader?name=assets/card-mini-mnemonic.svg!../assets/card-mini-mnemonic.svg");
 
+let viewIcon = require("file-loader?name=assets/si-glyph-view.svg!../assets/si-glyph-view.svg");
+
 console.log('logo', logo);
 console.log('menu', menu);
 

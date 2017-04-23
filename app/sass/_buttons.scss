@@ -16,3 +16,24 @@ button {
     color: darken($tcc-text, 7);
   }
 }
+
+.pass-btn {
+  position: absolute;
+  right: 4rem;
+  bottom: 26rem;
+  box-shadow: none;
+  background: $tcc-primary;
+  height: 7.8rem;
+  width: 7.8rem;
+  transition: background-color .25s;
+  background-image: url('/assets/si-glyph-view.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 42.5% 50%;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    background-color: darken($tcc-primary, 7);
+  }
+}
