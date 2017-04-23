@@ -336,7 +336,15 @@ em::after {
     padding: 0;
 }
 
-#solution img, #demo iframe, #explainer svg, #explainer-redeem svg {
+#demo, #demo2 {
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    height: 700px;
+    background: white;
+}
+
+#solution img, #demo iframe, #demo2 iframe, #explainer svg, #explainer-redeem svg {
     width: 100%;
     height: 100%;
 }
@@ -385,3 +393,19 @@ h6 {
     margin-bottom: 1.75em;
     margin-left: -0.225em;
 }
+
+ .art-img {
+    max-width: 50%;
+    margin-top: .8em;
+    margin-left: 6px;
+    outline: 6px #02d3af solid;
+    border: 6px solid white;
+ }
+
+#solution {
+    overflow: hidden;
+}
+
+ .whynot {
+    transform: scale(1.1);
+ }
