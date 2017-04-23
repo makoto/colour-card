@@ -19,8 +19,8 @@
   <div class="main" id="main">
     <div class="panel panel-1" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
-        <label>Twitter:</label>
-        <input v-model="twitter" type="name" name="name" class="input" placeholder="@twitter_handle">
+        <label>Name:</label>
+        <input v-model="name" type="name" name="name" class="input" placeholder="Enter your name">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
@@ -28,7 +28,10 @@
     <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
-        <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
+        <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
+        <input v-if="toggle_mode" v-model="password" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
+        <input v-if="!toggle_mode" v-model="password" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
@@ -45,13 +48,14 @@
       <!-- <form> to avoid submitting page -->
         <h4>Thank you for your order</h4>
         <p>The fowlloing information is sent and you will soon receive our color card</p>
+        <label>name:</label>
+        <span class="key-display">{{name}}</span>
 
         <label>public key:</label>
         <span class="key-display">{{pubkey}}</span>
 
         <label>Short code:</label>
         <span class="key-display">{{salt}}</span>
-
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
         <div class="cta-btn-container">

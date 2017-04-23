@@ -1,0 +1,45 @@
+ - card:
+    - type:          image
+      uri:           "tcc-front.png"
+      x:             -3
+      y:             -3
+      width:         91
+      height:        60
+    - type:          text
+      text:          "{{name}}"
+      align:         right
+      x:             82.5
+      y:             50
+      font:          "Helvetica"
+      color:         "#02d38d"
+      size:          18
+ - card:
+    - type:          image
+      uri:           "tcc-back.png"
+      x:             -3
+      y:             -3
+      width:         91
+      height:        60
+    - type:          QR
+      text:          "{{address}}"
+      x:             7.5
+      y:             14.25
+      size:          16
+      eclevel:       M
+      caseSensitive: true
+    - type:          text
+      text:          "{{address}}"
+      x:             6.5
+      y:             47
+      font:          "Courier-Bold"
+      size:          8
+    - type:          textArray
+      text:          "{{mnemonic}}"
+      split:         " "
+      x:             34.25
+      y:             17.75
+      font:          "Courier-Bold"
+      size:          8
+      columnSpacing: 15
+      rowSpacing:    3
+      columns:       3
