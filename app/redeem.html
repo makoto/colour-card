@@ -34,7 +34,14 @@
         <h4>Please enter the password you used to create your Colour Card...</h4>
 
         <label>Password:</label>
-        <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
+
+        <button v-if="toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
+        <button v-if="!toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
+
+        <input v-if="toggle_mode" v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
+
+        <input v-if="!toggle_mode" v-model="password" type="name" name="password" class="password-input" placeholder="Enter your password...">
+
         <button v-on:click="redeem" class="password-btn">Redeem</button>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
