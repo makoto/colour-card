@@ -58,17 +58,9 @@
 
       <!-- <form> to avoid submitting page -->
         <img class="image-large" src="assets/card-mini-success.svg">
-        <h4>Thank you for your order!</h4>
+        <h4>Thank you {{name}} for your order!</h4>
         <p>Your card is being printed as we speak! Soon you'll have your very own Color Card with the following information...</p>
-        <label>name:</label>
-        <span class="key-display">{{name}}</span>
 
-        <label>public key:</label>
-        <span class="key-display">{{pubkey}}</span>
-
-        <label>Short code:</label>
-        <span class="key-display">{{salt}}</span>
-        <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
         <div class="cta-btn-container">
           <button v-on:click="redirect('index.html')" class="cta-btn">Start again ➞</button>
