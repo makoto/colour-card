@@ -307,15 +307,15 @@ h1, h2, h3, h4, h5, h6, b, strong {
 }
 
 h1 {
-    font-size: 48pt;
-    margin-top: 0.5em;
+    font-size: 38pt;
+    margin-top: 0 !important;
     margin-bottom: .5em;
 }
 
 h2 {
-    font-size: 28pt;
-    font-weight: bold;
-    margin-top: 0.5em;
+    font-size: 20pt;
+    font-weight: 500 !important;;
+    margin-top: 0 !important;
     margin-bottom: 0.5em;
 }
 
@@ -356,6 +356,7 @@ ul, ol {
 }
 
 li {
+    font-size: 18pt;
     margin-bottom: 0.25em;
 }
 
@@ -366,4 +367,21 @@ li {
 #title h3 {
     margin-top: 0;
     font-size: 24px;
+}
+
+h6 {
+    font-size: .65em !important;
+    font-weight: 300 !important;
+    margin-bottom: 1em!important;
+    text-decoration: underline;
+}
+
+#title {
+    background: white;
+}
+
+.big-logo {
+    width: 60%;
+    margin-bottom: 1.75em;
+    margin-left: -0.225em;
 }
