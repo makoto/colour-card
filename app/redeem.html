@@ -46,10 +46,16 @@
         <p>Here's your private information...</p>
 
         <label>Address:</label>
-        <span class="key-display">{{address}}</span>
+        <span class="key-display">0x{{address}}</span>
 
         <label>Private key:</label>
-        <span class="key-display">{{privkey}}</span>
+        <span id='private-key' class="key-display">{{privkey}}</span>
+        <!-- Trigger -->
+        <button id="copy" data-clipboard-action="copy" data-clipboard-target="#private-key">
+            Copy to clipboard
+        </button>
+
+        <a href="https://www.myetherwallet.com/#view-wallet-info" target="blank" >Go to myetherwallet</a>
 
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
