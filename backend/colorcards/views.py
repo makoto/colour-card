@@ -71,6 +71,7 @@ def index(request):
 @require_POST
 @csrf_exempt
 def order(request):
+    print request.POST
     pubkey = request.POST['pubkey']
     salt = request.POST['salt']
     mnem = create_mnemonic(salt)

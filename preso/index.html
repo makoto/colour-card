@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ethereum Name Service</title>
+    <link rel="stylesheet" href="preso.css" >
+    <script src="https://use.fontawesome.com/f107c7e30a.js"></script>
+</head>
+<body>
+    <div id="impress">
+        <div id="title" class="step slide" data-x="0" data-y="0">
+            <h1>Colour Cards</h1>
+            <h2>Makoto Inoue, Mark Durrant &amp; Nick Johnson</h2>
+        </div>
+        <div id="intro" class="step slide" data-x="1000" data-y="0">
+            <h1>The Brief</h1>
+            <p><em>Design a solution for storing Keys and Passphrases, capable of offering the opportunity to reconnect the owner with the Wallet and contents should the link be severed.</em></p>
+        </div>
+        <div id="intro2" class="step slide" data-x="2000" data-y="0">
+            <h1>The Problem</h1>
+            <h2>Why not just generate keys yourself?</h2>
+            <ul>
+                <li>Few people make regular backups</li>
+                <li>If your computer dies, so does your bank account</li>
+                <li>If your computer is hacked, so is your bank account</li>
+            </ul>
+        </div>
+        <div id="intro3" class="step slide" data-x="3000" data-y="0">
+            <h1>The Problem</h1>
+            <h2>Why not trust a third party?</h2>
+            <ul>
+                <li>Centralised services are hacked with depressing regularity</li>
+                <li>You're trusting them with everything</li>
+                <li>If they go offline, so do you</li>
+            </ul>
+        </div>
+        <div id="solution" class="step slide" data-x="4000" data-y="0">
+            <img src="whynotboth.jpg">
+        </div>
+        <div id="solution2" class="step slide" data-x="5000" data-y="0">
+            <h1>Colour Cards</h1>
+            <ul>
+                <li>Combine the best attributes of both solutions</li>
+                <li>Enter a password to generate a card with an account</li>
+                <li>Neither card nor password alone can access your account</li>
+            </ul>
+        </div>
+        <div id="demo" class="step slide" data-x="6000" data-y="0">
+            <iframe src="http://thecolour.cards/"></iframe>
+        </div>
+        <div id="explainer" class="step slide" data-x="7000" data-y="0">
+            <h1>How it works</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                      <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                    </marker>
+                  </defs>
+                <g>
+                    <image x="10" y="10" xlink:href="si-glyph-dice-5.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Salt</text>
+                    <rect x="2.5" y="2.5" width="125" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <g transform="translate(200,0)">
+                    <image x="10" y="10" xlink:href="si-glyph-askterisk.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Password</text>
+                    <rect x="2.5" y="2.5" width="175" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <g transform="translate(75,150)">
+                    <image x="10" y="10" xlink:href="si-glyph-lock-unlock.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Public Key</text>
+                    <rect x="2.5" y="2.5" width="185" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <path fill="none" stroke="black" stroke-width="2" d="M60,68 t0,20 50,25 50,20" marker-end="url(#arrow)" />
+                <path fill="none" stroke="black" stroke-width="2" d="M300,68 t0,20 -50,25 -50,20" marker-end="url(#arrow)" />
+
+                <g transform="translate(0,300)">
+                    <image x="10" y="10" xlink:href="si-glyph-abacus.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Randomness</text>
+                    <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <script src="impress.js"></script>
+    <script>impress().init();</script>
+</body>
