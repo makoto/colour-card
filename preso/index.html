@@ -53,35 +53,78 @@
         <div id="explainer" class="step slide" data-x="7000" data-y="0">
             <h1>How it works</h1>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
-                      <path d="M0,0 L0,6 L9,3 z" fill="#000" />
-                    </marker>
-                  </defs>
-                <g>
-                    <image x="10" y="10" xlink:href="si-glyph-dice-5.svg" width="50" height="50" />
-                    <text x="70" y="45" font-family="Helvetica" font-size="24">Salt</text>
-                    <rect x="2.5" y="2.5" width="125" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                <defs>
+                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                  </marker>
+                </defs>
+                <g transform="scale(0.75)">
+                    <g transform="translate(250,0)">
+                        <image x="10" y="10" xlink:href="si-glyph-dice-5.svg" width="50" height="50" />
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Salt</text>
+                        <rect x="2.5" y="2.5" width="125" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <g transform="translate(0,0)">
+                        <image x="10" y="10" xlink:href="si-glyph-askterisk.svg" width="50" height="50" />
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Password</text>
+                        <rect x="2.5" y="2.5" width="175" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <g transform="translate(0,150)">
+                        <image x="10" y="10" xlink:href="si-glyph-lock-unlock.svg" width="50" height="50" />
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Public Key</text>
+                        <rect x="2.5" y="2.5" width="185" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <path fill="none" stroke="black" stroke-width="2" d="M30,68 l0,68" marker-end="url(#arrow)" />
+                    <path fill="none" stroke="black" stroke-width="2" d="M300,68 t0,20 -75,25 -75,20" marker-end="url(#arrow)" />
+
+                    <g transform="translate(400,300)">
+                        <image x="10" y="10" xlink:href="si-glyph-abacus.svg" width="50" height="50" />
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Randomness</text>
+                        <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <g transform="translate(0, 600)">
+                        <text x="8" y="50" font-family="Helvetica" font-size="52">0x</text>
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Address</text>
+                        <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <g transform="translate(200,450)">
+                        <image x="10" y="10" xlink:href="si-glyph-atm-card.svg" width="50" height="50" />
+                        <text x="70" y="45" font-family="Helvetica" font-size="24">Colour Card</text>
+                        <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                    </g>
+                    <path fill="none" stroke="black" stroke-width="2" d="M300,68 l0,367" marker-end="url(#arrow)" />
+                    <path fill="none" stroke="black" stroke-width="2" d="M500,368 t0,20 -75,27 -75,20" marker-end="url(#arrow)" />
+                    <path fill="none" stroke="black" stroke-width="2" d="M350,518 t0,20 -100,27 -100,20" marker-end="url(#arrow)" />
+                    <path fill="none" stroke="black" stroke-width="2" d="M30,218 l0,367" marker-end="url(#arrow)" />
                 </g>
-                <g transform="translate(200,0)">
+            </svg>
+        </div>
+        <div id="explainer-redeem" class="step slide" data-x="8000" data-y="0">
+            <h1>Claiming a card</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                  </marker>
+                </defs>
+                <g transform="translate(0,0)">
                     <image x="10" y="10" xlink:href="si-glyph-askterisk.svg" width="50" height="50" />
                     <text x="70" y="45" font-family="Helvetica" font-size="24">Password</text>
                     <rect x="2.5" y="2.5" width="175" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
                 </g>
-                <g transform="translate(75,150)">
-                    <image x="10" y="10" xlink:href="si-glyph-lock-unlock.svg" width="50" height="50" />
-                    <text x="70" y="45" font-family="Helvetica" font-size="24">Public Key</text>
-                    <rect x="2.5" y="2.5" width="185" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
-                </g>
-                <path fill="none" stroke="black" stroke-width="2" d="M60,68 t0,20 50,25 50,20" marker-end="url(#arrow)" />
-                <path fill="none" stroke="black" stroke-width="2" d="M300,68 t0,20 -50,25 -50,20" marker-end="url(#arrow)" />
-
-                <g transform="translate(0,300)">
-                    <image x="10" y="10" xlink:href="si-glyph-abacus.svg" width="50" height="50" />
-                    <text x="70" y="45" font-family="Helvetica" font-size="24">Randomness</text>
+                <g transform="translate(250,0)">
+                    <image x="10" y="10" xlink:href="si-glyph-atm-card.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Colour Card</text>
                     <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
                 </g>
-            </svg>
+                <g transform="translate(125,150)">
+                    <image x="10" y="10" xlink:href="si-glyph-key.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Private Key</text>
+                    <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <path fill="none" stroke="black" stroke-width="2" d="M100,68 t0,20 25,25 25,20" marker-end="url(#arrow)" />
+                <path fill="none" stroke="black" stroke-width="2" d="M350,68 t0,20 -25,25 -25,20" marker-end="url(#arrow)" />
+            </svg>            
         </div>
     </div>
     <script src="impress.js"></script>

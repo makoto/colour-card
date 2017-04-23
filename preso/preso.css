@@ -336,7 +336,7 @@ em::after {
     padding: 0;
 }
 
-#solution img, #demo iframe, #explainer svg {
+#solution img, #demo iframe, #explainer svg, #explainer-redeem svg {
     width: 100%;
     height: 100%;
 }
