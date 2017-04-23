@@ -14,19 +14,19 @@ let crypto = require('crypto');
 let secp256k1 = require('secp256k1');
 let util = require("ethereumjs-util");
 let salt, seed, publicKey, data;
-let host = 'http://bb6ce398.ngrok.io/order';
+let host = 'http://78d28058.ngrok.io/order';
 let jquery = require('jquery');
 
-var order = function(twitter, password){
+var order = function(name, password){
   console.log('password', password);
   salt = crypto.randomBytes(16).toString('hex');
   seed = bip39.mnemonicToSeed(password, salt)
   // console.log('seed', seed.toString('hex'));
   publicKey = secp256k1.publicKeyCreate(seed.slice(0,32)).toString('hex');
   // console.log('publicKey', publicKey);
-  data = {twitter:twitter, pubkey:publicKey, salt:salt};
+  data = {name:name, pubkey:publicKey, salt:salt};
   console.log('sending data', data);
-  // jquery.post(host, data);
+  jquery.post(host, data);
   return data;
 }
 
@@ -51,7 +51,7 @@ var redeem = function(mnemonic, password){
 
 window.addEventListener('load', function(){
   var data = {
-    twitter: null,
+    name: null,
     password: null,
     password_confirmation: null,
     mnemonic: null,
@@ -69,7 +69,7 @@ window.addEventListener('load', function(){
         this.toggle_mode = !this.toggle_mode;
       },
       order: function() {
-        var result =  order(this.twitter, this.password);
+        var result =  order(this.name, this.password);
         this.pubkey = result.pubkey;
         this.salt = result.salt;
         this.next_panel();
