@@ -20,15 +20,19 @@
 
   <div class="main" id="main">
     <div class="panel panel-1" v-bind:style="display(1)">
+      <h4>To start, please submit your name...</h4>
+
       <!-- <form> to avoid submitting page -->
         <label>Name:</label>
-        <input v-model="name" type="name" name="name" class="input" placeholder="Enter your name">
+        <input v-model="name" type="name" name="name" class="input" placeholder="Enter your name...">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
     <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
+        <h4>Next enter a memorable password, make sure it's something you'll never forget...</h4>
+
         <label>Password:</label>
         <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
         <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
@@ -40,6 +44,8 @@
 
     <div class="panel panel-3" v-bind:style="display(3)">
       <!-- <form> to avoid submitting page -->
+        <h4>PLease confirm by re-typing your password...</h4>
+
         <label>Password confirmation:</label>
         <button v-if="toggle_mode" v-on:click="toggle" class="btn">Show</button>
         <button v-if="!toggle_mode" v-on:click="toggle" class="btn">Hide</button>
@@ -52,8 +58,8 @@
 
       <!-- <form> to avoid submitting page -->
         <img class="image-large" src="assets/card-mini-success.svg">
-        <h4>Thank you for your order</h4>
-        <p>The fowlloing information is sent and you will soon receive our color card</p>
+        <h4>Thank you for your order!</h4>
+        <p>Your card is being printed as we speak! Soon you'll have your very own Color Card with the following information...</p>
         <label>name:</label>
         <span class="key-display">{{name}}</span>
 
@@ -65,7 +71,7 @@
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
         <div class="cta-btn-container">
-          <button v-on:click="redirect('index.html')" class="cta-btn">Home ➞</button>
+          <button v-on:click="redirect('index.html')" class="cta-btn">Start again ➞</button>
         </div>
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
