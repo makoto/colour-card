@@ -65,6 +65,7 @@ window.addEventListener('load', function(){
     password_confirmation: null,
     mnemonic: null,
     address: null,
+    pubkey: null,
     privkey: null,
     salt: null,
     current_panel: 1,
