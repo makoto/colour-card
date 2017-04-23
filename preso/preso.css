@@ -341,6 +341,16 @@ em::after {
     height: 100%;
 }
 
+#examplecard img, #examplecard-back img {
+    width: 100%;
+}
+
+#examplecard, #examplecard-back {
+    opacity: 1.0;
+    background: white;
+    border-radius: 20px;
+}
+
 ul, ol {
     margin-left: 1em;
 }
