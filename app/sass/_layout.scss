@@ -1,3 +1,13 @@
+html {
+  font-size: 8px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+}
+
 html,
 body {
   box-sizing: border-box;
@@ -8,7 +18,9 @@ body {
 }
 
 .main {
-  padding: 16rem 4rem;
+  padding: 12rem 4rem 24rem;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 .panel {
