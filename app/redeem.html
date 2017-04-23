@@ -28,7 +28,7 @@
       <!-- </form> -->
     </div> <!-- /.panel-2 -->
 
-    <div class="panel panel-2" v-bind:style="display(2)">
+    <div class="panel panel-2" v-bind:style="display(1)">
       <!-- <form> to avoid submitting page -->
         <label>Password:</label>
         <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
@@ -36,15 +36,21 @@
       <!-- </form> -->
     </div> <!-- /.panel-3 -->
 
-    <div class="panel panel-2" v-bind:style="display(3)">
+    <div class="panel panel-2" v-bind:style="display(2)">
         <!-- <form> to avoid submitting page -->
         <p>Your key is successfully redeemed</p>
 
         <label>address:</label>
-        <span class="key-display">{{address}}</span>
+        <span class="key-display">0x{{address}}</span>
 
         <label>private key:</label>
-        <span class="key-display">{{privkey}}</span>
+        <span id='private-key' class="key-display">{{privkey}}</span>
+        <!-- Trigger -->
+        <button id="copy" data-clipboard-action="copy" data-clipboard-target="#private-key">
+            Copy to clipboard
+        </button>
+
+        <a href="https://www.myetherwallet.com/#view-wallet-info" target="blank" >Go to myetherwallet</a>
 
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">

@@ -20,6 +20,7 @@ let util = require("ethereumjs-util");
 let salt, seed, publicKey, data;
 let host = 'http://78d28058.ngrok.io/order';
 let jquery = require('jquery');
+let Clipboard = require('Clipboard');
 
 var order = function(name, password){
   console.log('password', password);
@@ -44,7 +45,7 @@ var redeem = function(mnemonic, password){
   console.log(pubkey.length);
   console.log(pubkey.toString('hex'))
   console.log(privkey.toString('hex'))
-  var addr = util.pubToAddress(pubkey);
+  var addr = util.pubToAddress(pubkey).toString("hex");
   console.log(addr.toString("hex"));
   return {
     address: addr,
@@ -54,6 +55,8 @@ var redeem = function(mnemonic, password){
 
 
 window.addEventListener('load', function(){
+  new Clipboard('#copy');
+
   var data = {
     name: null,
     password: null,
