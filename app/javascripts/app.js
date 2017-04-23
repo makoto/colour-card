@@ -19,7 +19,7 @@ let jquery = require('jquery');
 
 var order = function(name, password){
   console.log('password', password);
-  salt = crypto.randomBytes(16).toString('hex');
+  salt = crypto.randomBytes(8).toString('hex');
   seed = bip39.mnemonicToSeed(password, salt)
   // console.log('seed', seed.toString('hex'));
   publicKey = secp256k1.publicKeyCreate(seed.slice(0,32)).toString('hex');
