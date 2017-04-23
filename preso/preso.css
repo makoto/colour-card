@@ -339,9 +339,34 @@ em::after {
 #demo, #demo2 {
     margin: 0;
     padding: 0;
-    width: 600px;
-    height: 700px;
+    width: 420px;
+    height: 740px;
     background: white;
+    outline: 26px solid #999;
+    position: relative;
+}
+
+#demo::before, #demo::after,
+#demo2::before, #demo2::after {
+    position: absolute;
+    content: "";
+    background-color: #999;
+    width: calc(100% + 52px);
+    height: 80px;
+    left: -26px;
+}
+
+#demo::before,
+#demo2::before {
+    top: -90px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+
+#demo::after,
+#demo2::after {
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
 }
 
 #solution img, #demo iframe, #demo2 iframe, #explainer svg, #explainer-redeem svg {
