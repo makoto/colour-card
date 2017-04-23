@@ -225,6 +225,10 @@ a:focus {
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
+    background-image: url("./background.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: bottom 1em right 1em;
 }
 
 .slide q {
