@@ -27,7 +27,7 @@
         <input v-model="name" type="name" name="name" class="input" placeholder="Enter your name...">
         <button v-on:click="next_panel" class="password-btn">Next</button>
       <!-- </form> -->
-    </div> <!-- /.panel-2 -->
+    </div> <!-- /.panel-1 -->
 
     <div class="panel panel-2" v-bind:style="display(2)">
       <!-- <form> to avoid submitting page -->
@@ -38,23 +38,11 @@
         <button v-if="!toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
         <input v-if="toggle_mode" v-model="password" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
         <input v-if="!toggle_mode" v-model="password" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
-        <button v-on:click="next_panel" class="password-btn">Next</button>
-      <!-- </form> -->
-    </div> <!-- /.panel-3 -->
-
-    <div class="panel panel-3" v-bind:style="display(3)">
-      <!-- <form> to avoid submitting page -->
-        <h4>PLease confirm by re-typing your password...</h4>
-
-        <label>Password confirmation:</label>
-        <button v-if="toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
-        <button v-if="!toggle_mode" v-on:click="toggle" class="btn pass-btn"></button>
-        <input v-if="toggle_mode" v-model="password_confirmation" type="password" name="password" class="password-input" placeholder="Enter a memorable password...">
-        <input v-if="!toggle_mode" v-model="password_confirmation" type="name" name="password" class="password-input" placeholder="Enter a memorable password...">
         <button v-on:click="order" class="password-btn">Go</button>
       <!-- </form> -->
-    </div> <!-- /.panel-3 -->
-    <div class="panel panel-4" v-bind:style="display(4)">
+    </div> <!-- /.panel-2 -->
+
+    <div class="panel panel-3" v-bind:style="display(3)">
 
       <!-- <form> to avoid submitting page -->
         <img class="image-large" src="assets/card-mini-success.svg">
@@ -74,7 +62,6 @@
       <li class="pagination-item" v-bind:class="isActive(1)"></li>
       <li class="pagination-item" v-bind:class="isActive(2)"></li>
       <li class="pagination-item" v-bind:class="isActive(3)"></li>
-      <li class="pagination-item" v-bind:class="isActive(4)"></li>
     </ul>
   </footer> <!-- /.footer-container -->
 
