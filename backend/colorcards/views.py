@@ -17,7 +17,7 @@ import yaml
 from .printer import CardPrinter
 
 
-ACTUALLY_PRINT = True
+ACTUALLY_PRINT = False
 
 
 mnemonic = Mnemonic('english')

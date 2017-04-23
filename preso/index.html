@@ -46,13 +46,38 @@
             </ul>
         </div>
         <div id="demo" class="step slide" data-x="6000" data-y="0">
-            <iframe src="http://www.example.com/"></iframe>
+            <iframe src="http://thecolour.cards/"></iframe>
         </div>
         <div id="explainer" class="step slide" data-x="7000" data-y="0">
             <h1>How it works</h1>
-            <svg>
-                <g stroke="black">
-                    <i class="fa fa-random" aria-hidden="true"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                      <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                    </marker>
+                  </defs>
+                <g>
+                    <image x="10" y="10" xlink:href="si-glyph-dice-5.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Salt</text>
+                    <rect x="2.5" y="2.5" width="125" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <g transform="translate(200,0)">
+                    <image x="10" y="10" xlink:href="si-glyph-askterisk.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Password</text>
+                    <rect x="2.5" y="2.5" width="175" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <g transform="translate(75,150)">
+                    <image x="10" y="10" xlink:href="si-glyph-lock-unlock.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Public Key</text>
+                    <rect x="2.5" y="2.5" width="185" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
+                </g>
+                <path fill="none" stroke="black" stroke-width="2" d="M60,68 t0,20 50,25 50,20" marker-end="url(#arrow)" />
+                <path fill="none" stroke="black" stroke-width="2" d="M300,68 t0,20 -50,25 -50,20" marker-end="url(#arrow)" />
+
+                <g transform="translate(0,300)">
+                    <image x="10" y="10" xlink:href="si-glyph-abacus.svg" width="50" height="50" />
+                    <text x="70" y="45" font-family="Helvetica" font-size="24">Randomness</text>
+                    <rect x="2.5" y="2.5" width="210" height="65" rx="5" ry="5" fill="none" stroke="black" stroke-width="2" />
                 </g>
             </svg>
         </div>

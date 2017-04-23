@@ -308,7 +308,7 @@ h2 {
     padding: 0;
 }
 
-#solution img, #demo iframe {
+#solution img, #demo iframe, #explainer svg {
     width: 100%;
     height: 100%;
 }
