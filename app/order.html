@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>THE COLOUR CARD</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Mono:500|Roboto:300,700" rel="stylesheet">
 
   <script src="./app.js"></script>
   <script src="https://unpkg.com/vue"></script>
@@ -46,13 +46,16 @@
     <div class="panel panel-4" v-bind:style="display(4)">
 
       <!-- <form> to avoid submitting page -->
-        <label>Thank you for the order</label>
+        <h4>Thank you for your order</h4>
         <p>The fowlloing information is sent and you will soon receive our color card</p>
-        <ul>
-          <li>twitter:{{twitter}}</li>
-          <li>public key:{{pubkey}}</li>
-          <li>short code:{{salt}}</li>
-        </ul>
+        <label>twitter:</label>
+        <span class="key-display">{{twitter}}</span>
+
+        <label>public key:</label>
+        <span class="key-display">{{pubkey}}</span>
+
+        <label>Short code:</label>
+        <span class="key-display">{{salt}}</span>
         <!-- if I get rid of input, it does not hide for some reason. -->
         <input type="hidden">
         <div class="cta-btn-container">
