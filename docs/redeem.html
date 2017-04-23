@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>THE COLOUR CARD</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Mono:500|Roboto:300,700" rel="stylesheet">
+
+  <script src="./app.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <h1 class="header-branding">THE COLOUR CARD</h1>
+    <button class="header-btn menu-btn"></button>
+  </header> <!-- /.header-container -->
+
+  <div class="main" id="main">
+    <div class="panel panel-1" v-bind:style="display(0)">
+      <!-- <form> to avoid submitting page -->
+        <label>Mnemonic:</label>
+        <textarea v-model="mnemonic" name="name" rows="8" cols="80" style="" placeholder="eg: cheap time globe subway hurry gas reopen dog draft burger barely joy"></textarea>
+      <!-- </form> -->
+    </div> <!-- /.panel-2 -->
+
+    <div class="panel panel-2" v-bind:style="display(0)">
+      <!-- <form> to avoid submitting page -->
+        <label>Password:</label>
+        <input v-model="password" type="password" name="password" class="password-input" placeholder="Enter your password...">
+        <button v-on:click="redeem" class="password-btn">Redeem</button>
+      <!-- </form> -->
+    </div> <!-- /.panel-3 -->
+
+    <div class="panel panel-2" v-bind:style="display(1)">
+        <!-- <form> to avoid submitting page -->
+        <p>Your key is successfully redeemed</p>
+
+        <label>address:</label>
+        <span class="key-display">{{address}}</span>
+
+        <label>private key:</label>
+        <span id='private-key' class="key-display">hello{{privkey}}</span>
+        <div class="cta-btn-container">
+          <button v-on:click="copy_to_clipboard('#private-key')" class="cta-btn">Copy to clip board ➞</button>
+        </div>
+
+        <a href="https://www.myetherwallet.com/#view-wallet-info" target="blank" >Go to myetherwallet</a>
+
+        <!-- if I get rid of input, it does not hide for some reason. -->
+        <input type="hidden">
+        <div class="cta-btn-container">
+          <button v-on:click="redirect('index.html')" class="cta-btn">Home ➞</button>
+        </div>
+      <!-- </form> -->
+    </div> <!-- /.panel-3 -->
+  </div> <!-- /.main -->
+
+  <footer id="footer" class="footer-container">
+    <ul class="pagination-container">
+      <li class="pagination-item" v-bind:class="isActive(1)"></li>
+      <li class="pagination-item" v-bind:class="isActive(2)"></li>
+    </ul>
+  </footer> <!-- /.footer-container -->
+
+</body>
+</html>
