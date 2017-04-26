@@ -2,7 +2,7 @@
 
 ## Summary
 
-Colour Cards allow you to easily generate a blockchain identity that's secure, easy to use, and hard to lose. With a colour card safely tucked away, you never need to worry about losing your wallet again. This is a proof of conecpt implementation of https://github.com/ethereum/EIPs/pull/601.
+Colour Cards allow you to easily generate a blockchain identity that's secure, easy to use, and hard to lose. With a colour card safely tucked away, you never need to worry about losing your wallet again. This is a proof of conecpt implementation of https://github.com/ethereum/EIPs/pull/602.
 
 ## The demo
 
